@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lesedi's Portfolio — First-Year IT Student | Aspiring Cybersecurity & Technology Professional" />
+  <meta name="author" content="Lesedi" />
+  <title>LESEDI.SYS | IT Student Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Matrix rain canvas background -->
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
+  <!-- ====================================================
+       NAVIGATION
+       ==================================================== -->
+  <nav id="navbar" role="navigation" aria-label="Primary navigation">
+    <div class="nav-logo" aria-label="Lesedi Portfolio">
+      [<span>LESEDI</span>.SYS]
+    </div>
+
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#home"     aria-label="Home section">home</a></li>
+      <li><a href="#about"    aria-label="About section">about</a></li>
+      <li><a href="#skills"   aria-label="Skills section">skills</a></li>
+      <li><a href="#projects" aria-label="Projects section">projects</a></li>
+      <li><a href="#mission"  aria-label="Mission Log section">mission_log</a></li>
+      <li><a href="#contact"  aria-label="Contact section">contact</a></li>
+    </ul>
+
+    <button class="nav-toggle" id="nav-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="nav-links">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ====================================================
+       MAIN CONTENT
+       ==================================================== -->
+  <main>
+
+    <!-- ==================================================
+         HOME / HERO SECTION
+         ================================================== -->
+    <section id="home" aria-label="Hero section">
+      <div class="hero-grid container">
+
+        <!-- Left: Text content -->
+        <div class="hero-content">
+
+          <p class="hero-prompt" aria-label="Terminal prompt">
+            root@lesedi:~# ./launch_portfolio.sh
+          </p>
+
+          <h1 class="hero-heading" aria-live="polite">
+            <span id="typed-text"></span>
+          </h1>
+
+          <p class="hero-name">
+            Hi, I'm <strong>Lesedi</strong> &mdash; a First-Year IT Student Exploring the Digital World.
+          </p>
+
+          <p class="hero-desc">
+            Aspiring IT professional passionate about technology, coding, cybersecurity,
+            networking, and discovering how systems work. Building skills one line of code at a time.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary" aria-label="Explore projects">
+              ./explore_projects
+            </a>
+            <a href="#contact" class="btn btn-secondary" aria-label="Contact Lesedi">
+              ./contact_me
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right: Status panel -->
+        <div class="status-panel fade-in" role="complementary" aria-label="System status panel">
+          <div class="panel-titlebar">
+            <span class="panel-dot red"   aria-hidden="true"></span>
+            <span class="panel-dot amber" aria-hidden="true"></span>
+            <span class="panel-dot green" aria-hidden="true"></span>
+            &nbsp; SYSTEM_STATUS.log
+          </div>
+          <div class="panel-body">
+            <div class="panel-row">
+              <span class="panel-label">USER</span>
+              <span class="panel-value">LESEDI</span>
+            </div>
+            <div class="panel-row">
+              <span class="panel-label">ROLE</span>
+              <span class="panel-value">IT STUDENT</span>
+            </div>
+            <div class="panel-row">
+              <span class="panel-label">YEAR</span>
+              <span class="panel-value">FIRST YEAR</span>
+            </div>
+            <div class="panel-row">
+              <span class="panel-label">FOCUS</span>
+              <span class="panel-value">CYBERSECURITY &amp; DEV</span>
+            </div>
+            <div class="panel-row">
+              <span class="panel-label">STATUS</span>
+              <span class="panel-value online" aria-label="System online">ONLINE &#9679;</span>
+            </div>
+            <div class="panel-row">
+              <span class="panel-label">MODE</span>
+              <span class="panel-value">LEARNING &amp; BUILDING</span>
+            </div>
+          </div>
+          <!-- Boot terminal -->
+          <div style="border-top: 1px solid rgba(0,170,255,0.2); padding: 0.8rem 1.2rem; min-height: 120px; overflow-y: auto;"
+               id="boot-terminal"
+               aria-live="polite"
+               aria-label="System boot log">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================================================
+         ABOUT SECTION
+         ================================================== -->
+    <section id="about" aria-label="About Lesedi">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <p class="section-tag">// PROFILE_DATA.json</p>
+          <h2 class="section-title">ABOUT ME</h2>
+          <p class="section-subtitle">Getting to know the operator behind the terminal</p>
+        </div>
+
+        <div class="about-grid">
+
+          <!-- Terminal window -->
+          <div class="terminal-window fade-in" role="complementary" aria-label="About terminal">
+            <div class="terminal-bar">
+              <span class="t-dot" aria-hidden="true"></span>
+              <span class="t-dot" aria-hidden="true"></span>
+              <span class="t-dot" aria-hidden="true"></span>
+              <span class="terminal-title">profile.sh</span>
+            </div>
+            <div class="terminal-body" aria-label="Profile information">
+              <span class="t-line"><span class="t-cmd">$ cat about_lesedi.txt</span></span>
+              <span class="t-line t-comment"># --------------------------------</span>
+              <span class="t-line t-output">NAME    : <span class="t-highlight">Lesedi</span></span>
+              <span class="t-line t-output">STATUS  : First-Year IT Student</span>
+              <span class="t-line t-output">MISSION : Building a strong foundation</span>
+              <span class="t-line t-output">          in information technology</span>
+              <span class="t-line">&nbsp;</span>
+              <span class="t-line"><span class="t-cmd">$ cat interests.txt</span></span>
+              <span class="t-line t-comment"># --------------------------------</span>
+              <span class="t-line t-output">[*] Programming &amp; Software Development</span>
+              <span class="t-line t-output">[*] Cybersecurity Fundamentals</span>
+              <span class="t-line t-output">[*] Computer Networks &amp; Systems</span>
+              <span class="t-line t-output">[*] Hardware &amp; Troubleshooting</span>
+              <span class="t-line t-output">[*] Continuous Learning</span>
+              <span class="t-line">&nbsp;</span>
+              <span class="t-line"><span class="t-cmd">$ echo $GOAL</span></span>
+              <span class="t-line t-output t-highlight">
+                Grow into a skilled IT professional
+              </span>
+              <span class="t-line t-output">who creates meaningful impact through</span>
+              <span class="t-line t-output">technology and cybersecurity.</span>
+              <span class="t-line">&nbsp;</span>
+              <span class="t-line t-comment"># System ready. All modules loaded.</span>
+            </div>
+          </div>
+
+          <!-- Trait cards -->
+          <div class="about-traits fade-in" aria-label="Personal traits">
+
+            <article class="trait-card">
+              <div class="trait-icon" aria-hidden="true">🔍</div>
+              <h3 class="trait-title">CURIOUS MINDSET</h3>
+              <p class="trait-desc">
+                I'm always asking "how does this work?" — whether it's a network protocol,
+                a piece of code, or a hardware component. Curiosity is my strongest tool.
+              </p>
+            </article>
+
+            <article class="trait-card">
+              <div class="trait-icon" aria-hidden="true">🧩</div>
+              <h3 class="trait-title">PROBLEM SOLVER</h3>
+              <p class="trait-desc">
+                I approach challenges systematically — break the problem down, research,
+                test solutions, and learn from every outcome whether it works or not.
+              </p>
+            </article>
+
+            <article class="trait-card">
+              <div class="trait-icon" aria-hidden="true">📈</div>
+              <h3 class="trait-title">GROWTH-ORIENTED</h3>
+              <p class="trait-desc">
+                Every day is an opportunity to learn something new. I'm committed to
+                building real skills in programming, networking, and cybersecurity — step by step.
+              </p>
+            </article>
+
+            <article class="trait-card">
+              <div class="trait-icon" aria-hidden="true">🤝</div>
+              <h3 class="trait-title">COLLABORATIVE</h3>
+              <p class="trait-desc">
+                Technology is a team sport. I value sharing knowledge, working with others,
+                and contributing to a community of learners and builders.
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         SKILLS SECTION
+         ================================================== -->
+    <section id="skills" aria-label="Skills section">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <p class="section-tag">// CAPABILITIES.json</p>
+          <h2 class="section-title">SKILLS &amp; TOOLS</h2>
+          <p class="section-subtitle">Developing competencies — honest progress indicators for a first-year student</p>
+        </div>
+
+        <div class="skills-grid">
+
+          <article class="skill-card fade-in" aria-label="Programming Fundamentals skill">
+            <div class="skill-header">
+              <span class="skill-icon" aria-hidden="true">💻</span>
+              <span class="skill-name">Programming Fundamentals</span>
+            </div>
+            <div class="skill-level-label">
+              <span class="skill-tag">DEVELOPING</span>
+              <span class="skill-pct">45%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" aria-label="Programming Fundamentals progress">
+              <div class="skill-bar-fill" data-width="45%"></div>
+            </div>
+            <p class="skill-desc">Variables, loops, functions, logic flow. Learning the core building blocks of any programming language.</p>
+          </article>
+
+          <article class="skill-card fade-in" aria-label="HTML and CSS skill">
+            <div class="skill-header">
+              <span class="skill-icon" aria-hidden="true">🌐</span>
+              <span class="skill-name">HTML &amp; CSS</span>
+            </div>
+            <div class="skill-level-label">
+              <span class="skill-tag">DEVELOPING</span>
+              <span class="skill-pct">55%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" aria-label="HTML and CSS progress">
+              <div class="skill-bar-fill" data-width="55%"></div>
+            </div>
+            <p class="skill-desc">Structuring web pages with semantic HTML and styling with CSS. Actively practicing responsive design.</p>
+          </article>
+
+          <article class="skill-card fade-in" aria-label="Computer Hardware skill">
+            <div class="skill-header">
+              <span class="skill-icon" aria-hidden="true">🖥️</span>
+              <span class="skill-name">Computer Hardware &amp; Troubleshooting</span>
+            </div>
+            <div class="skill-level-label">
+              <span class="skill-tag">DEVELOPING</span>
+              <span class="skill-pct">50%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Computer Hardware progress">
+              <div class="skill-bar-fill" data-width="50%"></div>
+            </div>
+            <p class="skill-desc">Understanding PC components, OS fundamentals, and diagnosing common hardware and software issues.</p>
+          </article>
+
+          <article class="skill-card fade-in" aria-label="Networking Fundamentals skill">
+            <div class="skill-header">
+              <span class="skill-icon" aria-hidden="true">📡</span>
+              <span class="skill-name">Networking Fundamentals</span>
+            </div>
+            <div class="skill-level-label">
+              <span class="skill-tag">DEVELOPING</span>
+              <span class="skill-pct">40%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" aria-label="Networking Fundamentals progress">
+              <div class="skill-bar-fill" data-width="40%"></div>
+            </div>
+            <p class="skill-desc">IP addressing, TCP/IP model, DNS, network topologies, and basic router/switch configuration concepts.</p>
+          </article>
+
+          <article class="skill-card fade-in" aria-label="Cybersecurity Fundamentals skill">
+            <div class="skill-header">
+              <span class="skill-icon" aria-hidden="true">🔒</span>
+              <span class="skill-name">Cybersecurity Fundamentals</span>
+            </div>
+            <div class="skill-level-label">
+              <span class="skill-tag">DEVELOPING</span>
+              <span class="skill-pct">35%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" aria-label="Cybersecurity Fundamentals progress">
+              <div class="skill-bar-fill" data-width="35%"></div>
+            </div>
+            <p class="skill-desc">CIA triad, common threats, basic security principles, password hygiene, and ethical use of security knowledge.</p>
+          </article>
+
+          <article class="skill-card fade-in" aria-label="Problem Solving skill">
+            <div class="skill-header">
+              <span class="skill-icon" aria-hidden="true">🧠</span>
+              <span class="skill-name">Problem-Solving</span>
+            </div>
+            <div class="skill-level-label">
+              <span class="skill-tag">STRONG</span>
+              <span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Problem Solving progress">
+              <div class="skill-bar-fill" data-width="70%"></div>
+            </div>
+            <p class="skill-desc">Systematic thinking, logical decomposition, and methodical debugging — applying structured approaches to find solutions.</p>
+          </article>
+
+          <article class="skill-card fade-in" aria-label="Technical Research skill">
+            <div class="skill-header">
+              <span class="skill-icon" aria-hidden="true">📚</span>
+              <span class="skill-name">Technical Research &amp; Self-Learning</span>
+            </div>
+            <div class="skill-level-label">
+              <span class="skill-tag">STRONG</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Technical Research progress">
+              <div class="skill-bar-fill" data-width="75%"></div>
+            </div>
+            <p class="skill-desc">Finding reliable documentation, reading technical articles, and using online resources to learn and solve problems independently.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         PROJECTS SECTION
+         ================================================== -->
+    <section id="projects" aria-label="Projects section">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <p class="section-tag">// PROJECTS_DIR/</p>
+          <h2 class="section-title">PROJECTS</h2>
+          <p class="section-subtitle">
+            Current builds and learning labs &mdash; real work in progress, placeholders marked below
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1 -->
+          <article class="project-card fade-in" aria-label="Personal Portfolio Website project">
+            <div class="project-header">
+              <span class="project-id">PRJ_001</span>
+              <span class="project-status-badge badge-active">ACTIVE</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Personal Portfolio Website</h3>
+              <p class="project-desc">
+                This very site — a hacker-themed personal portfolio built from scratch using
+                HTML, CSS, and JavaScript. Designed to showcase skills, projects, and learning
+                journey as a first-year IT student.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JAVASCRIPT</span>
+                <span class="tech-tag">RESPONSIVE</span>
+              </div>
+              <a href="#home" class="btn-project" aria-label="View portfolio project">VIEW PROJECT →</a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card fade-in" aria-label="Beginner Coding Projects">
+            <div class="project-header">
+              <span class="project-id">PRJ_002</span>
+              <span class="project-status-badge badge-placeholder">PLACEHOLDER</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Beginner Coding Projects</h3>
+              <p class="project-desc">
+                A collection of small programs built while learning programming fundamentals —
+                calculators, guessing games, text processors, and other logic exercises.
+                <em style="color: var(--blue-dim); font-size:0.72rem; display:block; margin-top:0.4rem;">
+                  [Placeholder — update with real project links]
+                </em>
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">PYTHON</span>
+                <span class="tech-tag">C / C++</span>
+                <span class="tech-tag">LOGIC</span>
+              </div>
+              <button class="btn-project" aria-label="View coding projects — coming soon" disabled style="opacity:0.5;cursor:not-allowed;">
+                COMING SOON...
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card fade-in" aria-label="Networking Learning Lab project">
+            <div class="project-header">
+              <span class="project-id">PRJ_003</span>
+              <span class="project-status-badge badge-placeholder">PLACEHOLDER</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Networking Learning Lab</h3>
+              <p class="project-desc">
+                A virtual network environment set up to practice IP configuration, subnetting,
+                and basic routing using simulation tools like Cisco Packet Tracer.
+                <em style="color: var(--blue-dim); font-size:0.72rem; display:block; margin-top:0.4rem;">
+                  [Placeholder — update with real lab documentation]
+                </em>
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">PACKET TRACER</span>
+                <span class="tech-tag">TCP/IP</span>
+                <span class="tech-tag">SUBNETTING</span>
+              </div>
+              <button class="btn-project" aria-label="View networking lab — coming soon" disabled style="opacity:0.5;cursor:not-allowed;">
+                COMING SOON...
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card fade-in" aria-label="Cybersecurity Practice Lab project">
+            <div class="project-header">
+              <span class="project-id">PRJ_004</span>
+              <span class="project-status-badge badge-placeholder">PLACEHOLDER</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Cybersecurity Practice Lab</h3>
+              <p class="project-desc">
+                An ethical hacking and security learning environment using beginner platforms
+                like TryHackMe or HackTheBox. Documenting learning paths and completed rooms.
+                <em style="color: var(--blue-dim); font-size:0.72rem; display:block; margin-top:0.4rem;">
+                  [Placeholder — update with real progress and writeups]
+                </em>
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">TRYHACKME</span>
+                <span class="tech-tag">LINUX</span>
+                <span class="tech-tag">CTF</span>
+              </div>
+              <button class="btn-project" aria-label="View cybersecurity lab — coming soon" disabled style="opacity:0.5;cursor:not-allowed;">
+                COMING SOON...
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         MISSION LOG (LEARNING JOURNEY)
+         ================================================== -->
+    <section id="mission" aria-label="Mission Log — learning journey">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <p class="section-tag">// MISSION_LOG.txt</p>
+          <h2 class="section-title">MISSION LOG</h2>
+          <p class="section-subtitle">Tracking the learning journey — what I've done, doing, and plan to conquer</p>
+        </div>
+
+        <div class="mission-grid">
+
+          <!-- Live log terminal -->
+          <div class="log-terminal fade-in" aria-label="Activity log terminal">
+            <div class="terminal-bar">
+              <div style="display:flex; gap:0.4rem;">
+                <span class="t-dot" aria-hidden="true"></span>
+                <span class="t-dot" aria-hidden="true"></span>
+                <span class="t-dot" aria-hidden="true"></span>
+              </div>
+              <span class="terminal-title">activity_log.sh</span>
+              <span class="log-status">● LIVE</span>
+            </div>
+            <div class="log-body" aria-label="Activity log entries">
+
+              <div class="log-entry">
+                <span class="log-ts">[Q1-2025]</span>
+                <span class="log-msg"><span class="ok">[OK]</span> Started first-year IT programme</span>
+              </div>
+              <div class="log-entry">
+                <span class="log-ts">[Q1-2025]</span>
+                <span class="log-msg"><span class="ok">[OK]</span> Completed Computer Hardware module</span>
+              </div>
+              <div class="log-entry">
+                <span class="log-ts">[Q2-2025]</span>
+                <span class="log-msg"><span class="ok">[OK]</span> Learned HTML &amp; CSS fundamentals</span>
+              </div>
+              <div class="log-entry">
+                <span class="log-ts">[Q2-2025]</span>
+                <span class="log-msg"><span class="ok">[OK]</span> Intro to programming concepts</span>
+              </div>
+              <div class="log-entry">
+                <span class="log-ts">[Q3-2025]</span>
+                <span class="log-msg"><span class="ok">[OK]</span> Networking fundamentals — TCP/IP</span>
+              </div>
+              <div class="log-entry">
+                <span class="log-ts">[Q4-2025]</span>
+                <span class="log-msg"><span class="info">[INFO]</span> Started cybersecurity self-study</span>
+              </div>
+              <div class="log-entry">
+                <span class="log-ts">[2026]</span>
+                <span class="log-msg"><span class="info">[INFO]</span> Built personal portfolio site</span>
+              </div>
+              <div class="log-entry">
+                <span class="log-ts">[NOW]</span>
+                <span class="log-msg"><span class="warn">[ACTIVE]</span> Improving JavaScript skills</span>
+              </div>
+              <div class="log-entry">
+                <span class="log-ts">[NOW]</span>
+                <span class="log-msg"><span class="warn">[ACTIVE]</span> Exploring TryHackMe beginner paths</span>
+              </div>
+              <div class="log-entry">
+                <span class="log-ts">[SOON]</span>
+                <span class="log-msg"><span class="plan">[PLAN]</span> Learn Python fundamentals in depth</span>
+              </div>
+              <div class="log-entry">
+                <span class="log-ts">[SOON]</span>
+                <span class="log-msg"><span class="plan">[PLAN]</span> Complete Cisco Packet Tracer labs</span>
+              </div>
+              <div class="log-entry">
+                <span class="log-ts">[FUTURE]</span>
+                <span class="log-msg"><span class="plan">[PLAN]</span> CompTIA Security+ / Network+ certification prep</span>
+              </div>
+              <div class="log-entry">
+                <span class="log-ts">[FUTURE]</span>
+                <span class="log-msg"><span class="plan">[PLAN]</span> Apply for first IT internship</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <div class="fade-in" aria-label="Learning journey timeline">
+            <div class="timeline" role="list">
+
+              <div class="tl-item done" role="listitem">
+                <p class="tl-date">2025 — Q1 &amp; Q2</p>
+                <h3 class="tl-title">Foundation Phase</h3>
+                <p class="tl-desc">
+                  Started IT studies. Covered computer hardware, OS basics,
+                  HTML, CSS, and intro to programming logic.
+                </p>
+                <span class="tl-badge done">COMPLETED</span>
+              </div>
+
+              <div class="tl-item done" role="listitem">
+                <p class="tl-date">2025 — Q3</p>
+                <h3 class="tl-title">Networking Basics</h3>
+                <p class="tl-desc">
+                  TCP/IP model, subnetting, DNS, IP addressing, network devices.
+                  Hands-on with Cisco Packet Tracer simulations.
+                </p>
+                <span class="tl-badge done">COMPLETED</span>
+              </div>
+
+              <div class="tl-item done" role="listitem">
+                <p class="tl-date">2025 — Q4 / 2026</p>
+                <h3 class="tl-title">Web Development &amp; Portfolio</h3>
+                <p class="tl-desc">
+                  Deepened HTML &amp; CSS skills. Started JavaScript. Built this
+                  portfolio site as a real-world project.
+                </p>
+                <span class="tl-badge done">COMPLETED</span>
+              </div>
+
+              <div class="tl-item active" role="listitem">
+                <p class="tl-date">NOW — 2026</p>
+                <h3 class="tl-title">JavaScript &amp; Cybersecurity Exploration</h3>
+                <p class="tl-desc">
+                  Learning JavaScript in depth. Starting ethical hacking basics
+                  on TryHackMe. Exploring Linux command line.
+                </p>
+                <span class="tl-badge active">IN PROGRESS</span>
+              </div>
+
+              <div class="tl-item future" role="listitem">
+                <p class="tl-date">2026 — 2027</p>
+                <h3 class="tl-title">Python &amp; Security Certifications</h3>
+                <p class="tl-desc">
+                  Plan to learn Python scripting for automation and security.
+                  Begin studying toward CompTIA Network+ and Security+.
+                </p>
+                <span class="tl-badge future">PLANNED</span>
+              </div>
+
+              <div class="tl-item future" role="listitem">
+                <p class="tl-date">2027+</p>
+                <h3 class="tl-title">First Internship &amp; Real-World Experience</h3>
+                <p class="tl-desc">
+                  Apply for IT internship or junior role. Contribute to open-source
+                  projects. Build a strong professional network.
+                </p>
+                <span class="tl-badge future">PLANNED</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         CONTACT SECTION
+         ================================================== -->
+    <section id="contact" aria-label="Contact section">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <p class="section-tag">// ESTABLISH_CONNECTION.sh</p>
+          <h2 class="section-title">ESTABLISH CONNECTION</h2>
+          <p class="section-subtitle">Open to collaborations, opportunities, and conversations about tech</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Left: info & links -->
+          <div class="fade-in">
+            <h3>OPEN CHANNELS</h3>
+            <p>
+              Feel free to reach out whether you're a fellow student, lecturer,
+              potential employer, or anyone interested in tech. I'm always happy to connect.
+            </p>
+
+            <nav class="contact-links" aria-label="Contact links">
+
+              <a href="mailto:your.email@example.com"
+                 class="contact-link"
+                 aria-label="Send email to Lesedi (placeholder — update with your real email)">
+                <span class="contact-link-icon" aria-hidden="true">📧</span>
+                <div>
+                  <div class="contact-link-label">EMAIL</div>
+                  <div>your.email@example.com</div>
+                </div>
+              </a>
+
+              <a href="https://github.com/your-username"
+                 class="contact-link"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="Visit Lesedi's GitHub profile (placeholder — update with your real username)">
+                <span class="contact-link-icon" aria-hidden="true">⚡</span>
+                <div>
+                  <div class="contact-link-label">GITHUB</div>
+                  <div>github.com/your-username</div>
+                </div>
+              </a>
+
+              <a href="https://linkedin.com/in/your-profile"
+                 class="contact-link"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="Visit Lesedi's LinkedIn profile (placeholder — update with your real profile)">
+                <span class="contact-link-icon" aria-hidden="true">🔗</span>
+                <div>
+                  <div class="contact-link-label">LINKEDIN</div>
+                  <div>linkedin.com/in/your-profile</div>
+                </div>
+              </a>
+
+            </nav>
+
+            <!-- Placeholder notice -->
+            <p style="color: var(--blue-dim); font-size: 0.72rem; margin-top: 1.2rem; line-height: 1.7; border-left: 2px solid rgba(0,170,255,0.2); padding-left: 0.8rem;">
+              ⚠️ Update the email, GitHub, and LinkedIn placeholders above with your real details before sharing the site.
+            </p>
+          </div>
+
+          <!-- Right: contact form -->
+          <div class="contact-form-wrap fade-in" role="region" aria-label="Contact form">
+            <div class="form-bar">
+              <span aria-hidden="true">◈</span>&nbsp; send_message.sh
+            </div>
+
+            <form class="contact-form" id="contact-form" novalidate aria-label="Contact Lesedi form">
+
+              <div class="form-group">
+                <label class="form-label" for="name">NAME</label>
+                <input class="form-input"
+                       type="text"
+                       id="name"
+                       name="name"
+                       placeholder="Your name..."
+                       autocomplete="name"
+                       required
+                       aria-required="true" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">EMAIL</label>
+                <input class="form-input"
+                       type="email"
+                       id="email"
+                       name="email"
+                       placeholder="your@email.com"
+                       autocomplete="email"
+                       required
+                       aria-required="true" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="message">MESSAGE</label>
+                <textarea class="form-textarea"
+                          id="message"
+                          name="message"
+                          placeholder="Write your message here..."
+                          required
+                          aria-required="true"></textarea>
+              </div>
+
+              <p class="form-notice">
+                <strong>⚠️ Note:</strong> This is a static site — the form does not send emails automatically.
+                To make it functional, connect a free service like
+                <a href="https://formspree.io" target="_blank" rel="noopener noreferrer"
+                   style="color: var(--blue-primary); text-decoration: none;">Formspree.io</a>.
+                See the README for setup instructions.
+              </p>
+
+              <div id="form-feedback" role="alert" aria-live="assertive"></div>
+
+              <button type="submit" class="btn-submit" aria-label="Send message">
+                > TRANSMIT_MESSAGE.sh
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================================================
+       FOOTER
+       ==================================================== -->
+  <footer role="contentinfo">
+    <p class="footer-text">
+      &copy; 2026 <span>LESEDI</span> &mdash;
+      BUILT WITH HTML, CSS &amp; JAVASCRIPT &mdash;
+      <span>SYSTEM ONLINE ●</span>
+    </p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
